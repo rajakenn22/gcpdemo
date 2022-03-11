@@ -24,7 +24,6 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
-timeout: 1800s
 
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.0'
@@ -92,5 +91,5 @@ timeout: 1800s
         echo "Branch '$BRANCH_NAME' does not represent an oficial environment."
         echo "*******************************************************************************"
       fi
+# [END tf-apply]   
 timeout: 1800s
-# [END tf-apply]    
