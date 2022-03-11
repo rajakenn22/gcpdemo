@@ -48,7 +48,7 @@ steps:
         done
       fi 
 
-# [START tf-plan]
+/*# [START tf-plan]
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.0'
   entrypoint: 'sh'
@@ -90,6 +90,7 @@ steps:
         echo "*******************************************************************************"
       fi
 # [END tf-apply]  
+*/
 
 # [START tf-destroy]
 - id: 'tf destroy'
