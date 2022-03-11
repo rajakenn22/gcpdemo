@@ -14,10 +14,11 @@
 
 
 steps:
-timeout: 1800s
+
 - id: 'branch name'
   name: 'alpine'
-  entrypoint: 'sh'  
+  entrypoint: 'sh' 
+timeout: 1800s
   args: 
   - '-c'
   - | 
