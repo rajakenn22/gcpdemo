@@ -1,5 +1,5 @@
 provider "google" {
  credentials = file("./DB_Server/db_key.json")
- project     = "pacific-attic-343704"
+ project     = "gcp-demonstration-343804"
  region      = "asia-southeast1"
 }
