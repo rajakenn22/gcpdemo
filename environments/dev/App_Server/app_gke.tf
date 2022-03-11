@@ -34,16 +34,3 @@ resource "google_container_node_pool" "wp_cluster_nodes" {
   }
 }
 
-resource "null_resource" "update_kubeconfig"  {
-depends_on = [
-    google_container_node_pool.wp_cluster_nodes
-  ]
-	provisioner "local-exec" {
-        command = <<EOF
-     	 gcloud container clusters get-credentials ${google_container_cluster.wp_gke.name} --zone ${google_container_cluster.wp_gke.location} --project ${data.google_project.prod_project.project_id}
-       sleep 5
-       EOF
-    
-    interpreter = ["PowerShell", "-Command"]
-  	}
-}
